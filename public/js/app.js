@@ -10,7 +10,7 @@ weatherForm.addEventListener('submit', (r) => {
     r.preventDefault()
 
     const location = search.value
-    fetch('https://shah13-weather-application.herokuapp.com//weather?location='+location).then((response) => {
+    fetch('/weather?location='+location).then((response) => {
     response.json().then((data) => {
         if(data.error)
         {
